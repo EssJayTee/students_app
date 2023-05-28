@@ -18,6 +18,10 @@ app = FastAPI()
 async def create_student(student: StudentCreateSchema):
     return student
 
+@app.get("/student/{id}")
+async def get_student(id: int):
+    pass
+
 @app.get("/")
 async def root():
     return {"message": "JD"}
